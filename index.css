@@ -1,0 +1,256 @@
+/* Css variables */
+:root{
+    --bran-color: #191923;
+    --yellow--color: #fcb900;
+    --gray-background--color: #2c2c31;
+    --black--color: #000000;
+    --white--color: #ffffff;
+    --gray-text--color: #8C8989;
+    /* Shadow */
+    --primary-box--shadow:  4px 4px 4px rgba(0, 0, 0, 0.25);
+    /* Fonts */
+    --paragraph--font: "Calibri";
+    --brand--font: 'Inter', sans-serif;
+    --small--font:  'Cabin', sans-serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.home__container{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    max-height: 150vh;
+}
+/* Custome fonts styles */
+.language__info,#Name,#info__text--left, #info__text--right,.coding__skil, .skills__list, #skills__list--title,
+.container__left--footer{
+    font-family: var(--small--font);
+    font-size: 16px;
+    font-weight: 200;
+    font-style: normal;
+}
+/* Left Side contents */
+.container__left{
+    width: 262px;
+    max-height: 150vh;
+}
+/* Left Header Styles */
+.left__header{
+    width: 100%;
+    background-color: var(--gray-background--color);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    box-shadow: var(--primary-box--shadow);
+    padding: 2rem;
+    justify-content: center;
+    text-align: center;
+    z-index: 100;
+    align-items: center;
+}
+#left__header--image{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    box-shadow: var(--primary-box--shadow);
+}
+.left__header--text{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+#Name{
+    font-family: var(--small--font);
+    font-size: 18px;
+ 
+    color: var(--white--color);
+}
+#Position{
+    font-size: 16px;
+    font-family: var(--small--font);
+    color: var(--gray-text--color);
+}
+/* left header body */
+.left__body{
+    width: 100%;
+    background-color: var(--black--color);
+    box-shadow: var(--primary-box--shadow);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 1.5rem;
+    height: 420px;
+    overflow-y: scroll;
+}
+.left__body::-webkit-scrollbar{
+    display: none;
+}
+.basics__info{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    color: var(--white--color);
+}
+.info__text{
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+    width: 100%;
+}
+#info__text--left, #info__text--right{
+    font-family: var(--small--font);  
+}
+#info__text--right{
+    color: var(--gray-text--color);
+}
+/* Language info Styles */
+.language__info{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    font-family: var(--small--font);
+    gap: 15px;
+    color: var(--white--color);
+}
+/* Round Progress */
+.circle__progress{
+    width: 100%;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+}
+.round__progress{
+    width: 150px;
+    transform: rotate(240deg);
+    height: 150px;
+    position:relative;
+}
+.round__progress circle{
+    width: 150px;
+    height: 150px;
+    fill: none;
+    stroke-width: 8;
+    transform:translate(5px, 5px);
+    stroke-linecap: round;
+    stroke: var(--bran-color);
+    stroke-dasharray: 440;
+    stroke-dashoffset: 440;
+}
+.round__progress circle:nth-child(1){
+    stroke-dashoffset: 0;
+    stroke: var(--bran-color);
+}
+.round__progress circle:nth-child(2){
+    stroke-dashoffset: calc(440 - (440 * 85)/100) ;
+    stroke: var(--yellow--color);
+}
+.number{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    color: var(--yellow--color);
+}
+/* Coding Skills section */
+.coding__skil{
+    width: 100%;
+    display: flex;
+    flex-direction:column;
+    gap: 15px;
+    color: var(--white--color);
+}
+.skill--html,.skill--css, .skill--javascript, .skill--figma, .skill--nodeJs, .skill--reactJs, .skill--scss{
+    width: 100%;
+}
+.html--text,#coding--language,.css--text, .scss--text, .nodeJs--text, .reactJs--text, .figma--text,
+.javascript--text{
+    display: flex;
+    font-weight: 200;
+    justify-content: space-between;
+    font-size: 16px;
+}
+/* Coding skills progress */
+meter::-webkit-meter-bar{
+    background-color: var(--bran-color);
+}
+#meter{
+    width: 100%;
+}
+.skill--html > ::-webkit-meter-optimum-value, .skill--css > ::-webkit-meter-optimum-value,
+.skill--javascript > ::-webkit-meter-optimum-value, .skill--reactJs > ::-webkit-meter-optimum-value,
+.skill--nodeJs > ::-webkit-meter-optimum-value, .skill--scss > ::-webkit-meter-optimum-value, 
+.skill--figma > ::-webkit-meter-optimum-value{
+    background-color: var(--yellow--color);
+}
+/* Skill List Section */
+.skills__list{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    color: var(--white--color);
+    gap: 20px;
+}
+#skills__list--title{
+    font-size: 18px;
+}
+.skills{
+    list-style-type: none;
+    gap: 20px;
+    color: var(--gray-text--color);
+}
+.container__left--footer{
+    width: 100%;
+    display: flex;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 14px;
+    border: none;
+    background-color: var(--black--color);
+    outline: none;
+    font-weight: 200;
+    color: var(--gray-text--color);
+    justify-content: center;
+ }
+ .container__left--footer:hover{
+    color: var(--yellow--color);
+ }
+ #download__icon{
+    width: 50px !important;
+    height: 25px !important;
+ }
+ .page__footer{
+    width: 100%;
+    padding: 0.6rem;
+    display: flex;
+    cursor: pointer;
+    gap: 10px;
+    justify-content: center;
+    background-color: var(--gray-background--color);
+    box-shadow: var(--primary-box--shadow);
+ }
+ .page__footer img:hover{
+    transform: scale(1.2);
+ }
+/* The middle section */
+.container__middle{
+    width: 80%;
+    max-height: 150vh;
+    background-color: #191923;
+}
+/* The right Section */
+.container__right{
+    width: 85px;
+    max-height: 150vh;
+    background-color: #191920;
+}
