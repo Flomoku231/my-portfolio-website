@@ -1,0 +1,26 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.AboutMe__container{
+    width: 90%;
+    justify-content: center;
+    margin-bottom: 0.8rem !important;
+    margin: auto;
+    display:  flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 25px;
+}
+.AboutMe__container>h1{
+    font-family: var(--small--font);
+    color: var(--white--color);
+    font-size: 22px;
+    font-weight: 200;
+}
+.AboutMe__container>p{
+    font-family: var(--small--font);
+    color: var(--gray-text--color);
+    font-size: 18px;
+}
