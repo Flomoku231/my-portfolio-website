@@ -34,6 +34,10 @@
     flex-direction: column;
     position: relative;
 }
+.portfolio__card:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
 .portfolio__card--content{
     position: absolute;
     padding: 25px;
@@ -56,4 +60,8 @@
     font-family: var(--small--font);
     font-size: 14px;
     font-weight: 200;
+}
+a{
+    color: var(--white--color);
+    cursor: pointer;
 }

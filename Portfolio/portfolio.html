@@ -11,7 +11,7 @@
     <title>Portfolio</title>
     <link rel="stylesheet" href="../index.css">
     <link rel="stylesheet" href="./portfolio.css">
-    <script difer src="../index.js" ></script>
+    <script defer src="../index.js" ></script>
 </head>
 <body>
     <main class="home__container">
@@ -120,6 +120,7 @@
             <section class="middle__portfolio">
                 <h1>Portfolio</h1>
                 <div class="portfolio__row1">
+                    <a href="./details.html">
                     <div class="portfolio__card">
                         <img id="portfolio__card--image" src="../Assets/Portfolio.png" alt="Portfolio Image">
                         <div class="portfolio__card--content">
@@ -127,6 +128,7 @@
                             <button class="row1__card--button"><h3>Rush Now</h3> <img src="../Assets/Icons/order.png" alt=""> </button>
                         </div>
                     </div>
+                    </a>
                     <div class="portfolio__card">
                         <img id="portfolio__card--image" src="../Assets/Portfolio.png" alt="Portfolio Image">
                         <div class="portfolio__card--content">
@@ -224,11 +226,25 @@
         <!-- right section -->
         <section class="container__right">
             <div class="right__menu--icon">
-               <button class="menu__button"><img id="menu__button--image" src="../Assets/Icons/MenuRight.png" alt="Menu"></button> 
+               <button onclick="showMe()" class="menu__button"><img id="menu__button--image" src="../Assets/Icons/MenuRight.png" alt="Menu"></button> 
             </div>
             <h1 id="menu--right">
                 Portfolio
             </h1>
+        </section>
+         <section class="menu__popup--hide">
+            <div onclick="hideMe()"   class="overlay"></div>
+            <div class="popup__body">
+            <div class="popup--header">
+              <button onclick="hideMe()" class="close--me"><img src="../Assets/Icons/closeMenu.svg" alt="close"></button>  
+            </div>
+            <ul class="menu--list">
+               <a href="../index.html"><li>Home</li></a>
+               <a href="../About/about.html"><li>About Me</li></a>
+               <a href="../portfolio.html"><li>My Portfolio</li></a>
+               <a href="../Contacts/contact.html"><li>Contact Me</li></a>
+            </ul>
+        </div>
         </section>
     </main>
 </body>

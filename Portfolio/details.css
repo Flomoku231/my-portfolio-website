@@ -1,0 +1,32 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.details__image{
+    width: 100%;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+.details__content--text{
+    width: 100%;
+    padding: 1rem 0px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+#text--title{
+    font-size: 2rem;
+    font-weight: 300;
+    font-family: var(--small--font);
+    color: var(--yellow--color);
+    margin-top: 10px;
+}
+.details__content--text>p{
+    font-size: 18px;
+    font-family: var(--small--font);
+    font-weight: 100;
+    color: var(--gray-text--color);
+}

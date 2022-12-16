@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400&display=swap" rel="stylesheet">
     <title>Home</title>
     <link rel="stylesheet" href="./index.css">
-    <script difer src="./index.js" ></script>
+    <script defer src="./index.js" ></script>
 </head>
 <body>
     <main class="home__container">
@@ -307,11 +307,25 @@
         <!-- right section -->
         <section class="container__right">
             <div class="right__menu--icon">
-               <button class="menu__button"><img id="menu__button--image" src="./Assets/Icons/MenuRight.png" alt="Menu"></button> 
+               <button class="menu__button" onclick="showMe()"><img id="menu__button--image" src="./Assets/Icons/MenuRight.png" alt="Menu"></button> 
             </div>
             <h1 id="menu--right">
                 Home
             </h1>
+        </section>
+        <section class="menu__popup--hide">
+            <div onclick="hideMe()"   class="overlay"></div>
+            <div class="popup__body">
+            <div class="popup--header">
+              <button onclick="hideMe()" class="close--me"><img src="./Assets/Icons/closeMenu.svg" alt="close"></button>  
+            </div>
+            <ul class="menu--list">
+               <a href="./index.html"><li>Home</li></a>
+               <a href="./About/about.html"><li>About Me</li></a>
+               <a href="./Portfolio/portfolio.html"><li>My Portfolio</li></a>
+               <a href="./Contacts/contact.html"><li>Contact Me</li></a>
+            </ul>
+        </div>
         </section>
     </main>
 </body>
