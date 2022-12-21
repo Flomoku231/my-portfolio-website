@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
     <link href="https://fonts.googleapis.com/css2?family=Cabin&family=Inter:wght@300;400&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,7 +20,10 @@
     <main class="home__container">
         <!-- Left Section -->
         <section class="container__left">
+            <div onclick="hideProfile()" class="profile__overlay"></div>
+            
             <div class="left__header">
+                <button onclick="hideProfile()" class="close--profile"><img src="./Assets/Icons/closeMenu.svg" alt="close"></button>
                 <img id="left__header--image" src="./Assets/Emmanuel.jpeg" alt="Emmanuel">
                 <div class="left__header--text">
                     <h1 id="Name">Emmanuel K. Flomoku</h1>
@@ -116,6 +123,13 @@
         </section>
         <!-- Middle Section -->
         <section class="container__middle">
+            <!-- Middle Section Navbar -->
+            <div class="Navbar__container">
+                <div class="Navbar__display">
+                <button onclick="displayProfile()" class="Navbar__right--button"> <img id="Navbar__right--icon" src="./Assets/Icons/dotIcon.svg" alt=""> </button>
+                <button class="Navbar__left--button" onclick="showMe()"><img id="menu__button--image" src="./Assets/Icons/MenuRight.png" alt="Menu"></button> 
+                </div>
+            </div>
             <!-- Middle Section Head -->
             <section class="middle__header">
                 <div class="middle__header--content">
@@ -125,24 +139,28 @@
                             <h3 id="Code--text">&lt;<span id="Code">Code</span>&gt; I <span class="auto--text"></span> &lt;/<span id="Code">Code</span>&gt;</h3>
                             <button class="middle__header--button">Explore More</button>
                     </div>
-                    <img src="./Assets/HeaderPhoto.png" alt="Emmanuel">
+                    <img id="header__image" src="./Assets/HeaderPhoto.png" alt="Emmanuel">
             </div>
             </section>
             <!-- Middle Section Experienced -->
             <section class="middle__experienced">
                 <div class="experienced--content">
+                    <div class="experienced--content--left">
                     <div class="experienced--text">
                         <h1>10 +</h1><p>Years Experienced</p>
                     </div>
                     <div class="projects--text">
                         <h1>143 +</h1><p>Completed Projects</p>
                     </div>
+                </div>
+                <div class="experienced--content--right">
                     <div class="customers--text">
                         <h1>114 +</h1><p>Customers</p>
                     </div>
                     <div class="award--text">
                         <h1>20 +</h1><p>Honors & Awards</p>
                     </div>
+                </div>
                 </div>
             </section>
             <!-- Middle Section Services -->
@@ -254,8 +272,9 @@
             <!-- Recommendations Section -->
             <section class="middle__recommendations">
                 <h2>Recommendations</h2>
-                <div class="recommendations__content--row">
-                <div class="recommendations__content">
+                <div class="swiper">
+                <div class="recommendations__content--row swiper-wrapper">
+                <div class="recommendations__content swiper-slide">
                     <img id="recommendations--image" src="./Assets/Eric.jpeg" alt="Photo">
                     <div class="recommendations__content--box">
                         <h2>Hawa Cooper</h2>
@@ -271,7 +290,7 @@
                         </div>
                     </div>
                 </div>
-                    <div class="recommendations__content">
+                    <div class="recommendations__content swiper-slide">
                         <img id="recommendations--image" src="./Assets/Eric.jpeg" alt="Photo">
                         <div class="recommendations__content--box">
                             <h2>Hawa Cooper</h2>
@@ -287,7 +306,26 @@
                             </div>
                         </div>
                     </div>
-                </div>     
+                    <div class="recommendations__content swiper-slide">
+                        <img id="recommendations--image" src="./Assets/Eric.jpeg" alt="Photo">
+                        <div class="recommendations__content--box">
+                            <h2>Hawa Cooper</h2>
+                            <h3>Registered Nurse</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus esse commodi deserunt vitae, vero quasi! Veniam quaerat tenetur pariatur doloribus. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus esse commodi deserunt vitae, 
+                                vero quasi! Veniam quaerat tenetur pariatur doloribus.</p>
+                            <div class="box--stars">
+                                <img src="./Assets/Icons/Stars.png" alt="stars">
+                                <img src="./Assets/Icons/Stars.png" alt="stars">
+                                <img src="./Assets/Icons/Stars.png" alt="stars">
+                                <img src="./Assets/Icons/Stars.png" alt="stars">
+                                <img src="./Assets/Icons/Stars.png" alt="stars">
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+                <div class="swiper-pagination"></div>
+              
+            </div>   
             </section>
             <!-- middle clients logos -->
             <section class="middle__clients">
@@ -340,3 +378,53 @@
         backSpeed: 200
     })
 </script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+<script type="module">
+    import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.esm.browser.min.js'
+
+    const swiper = new Swiper('.swiper',{
+   
+    slidesPerView: 2,
+    slidesPerColumn: 2,
+    spaceBetween: 30,
+   pagination:{
+      el: '.swiper-pagination',
+   },
+   autoplay:{
+    delay: 3000,
+   },
+   breakpoints: {
+          750: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+          },
+          650:{
+            slidesPerView: 1,
+            spaceBetween: 20,
+          },
+          550:{
+            slidesPerView: 1,
+            spaceBetween: 20,
+          },
+          450:{
+            slidesPerView: 1,
+            spaceBetween: 20,
+          },
+          350: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+          },
+          300:{
+            slidesPerView: 1,
+            spaceBetween: 20,
+          },
+          250:{
+            slidesPerView: 1,
+            spaceBetween: 20,
+          },
+        },
+
+})
+  </script>
+
+

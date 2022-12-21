@@ -144,14 +144,14 @@
                 <div class="contacts__form--section">
                     <h2>Get In Touch</h2>
                     <div class="contacts__form--container">
-                        <form action="" class="contacts__form">
+                        <form action="" class="contacts__form" >
                             <!-- Name Input -->
                             <div class="name__input--container">
                                 <div class="name__input">
                                     <label for="input__name" class="icon__section"> <img  src="../Assets/Icons/User.png" alt="Icon"> </label>
                                     <input id="input__name"  type="text" placeholder="Name">
                                 </div>
-                                <p id="error__message"></p>
+                                <p class="error__message"></p>
                             </div>
                             <!-- Email Input -->
                             <div class="email__input--container">
@@ -159,7 +159,7 @@
                                     <label for="input__email" class="icon__section"> <img src="../Assets/Icons/emailIcon.png" alt="Icon"> </label>
                                     <input id="input__email"  type="email" placeholder="Email">
                                 </div>
-                                <p id="error__message">Email Field is required</p>
+                                <p class="error__email"></p>
                             </div>
 
                             <!-- Message Area -->
@@ -168,9 +168,9 @@
                                     <label for="input__message" class="icon__section"> <img src="../Assets/Icons/messageIcon.png" alt="Icon"> </label>
                                     <textarea name="message" id="input__message" cols="30" rows="10" placeholder="Message"></textarea>
                                 </div>
-                                <p id="error__message">Message Field is required</p>
+                                <p class="message__error"></p>
                             </div>
-                            <button type="submit" class="form--button" onclick="formValidation()" >Send Message</button>
+                            <button type="submit" class="form--button" >Send Message</button>
                         </form>
                     </div>
                 </div>
@@ -187,7 +187,7 @@
                <button onclick="showMe()" class="menu__button"><img id="menu__button--image" src="../Assets/Icons/MenuRight.png" alt="Menu"></button> 
             </div>
             <h1 id="menu--right">
-                About Me
+                Contact
             </h1>
         </section>
         <section class="menu__popup--hide">

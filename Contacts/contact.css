@@ -99,7 +99,7 @@
     outline: 0;
     border: 0;
 }
-#error__message{
+.error__message, .error__email,.message__error{
     color: var(--yellow--color);
     font-family: "Calibri";
 }
