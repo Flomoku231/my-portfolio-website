@@ -12,6 +12,11 @@
     margin: auto;
     justify-content: center;
 }
+@media all and (max-width: 1000px){
+    .middle__contacts {
+        margin-top: 5rem !important;
+    }
+}
 .contacts__head{
     width: 100%;
     margin-bottom: 30px;
@@ -118,4 +123,33 @@
 }
 .form--button:hover{
     transform: translateY(-5px);
+}
+
+@media all and (max-width: 750px){
+    .contacts__head--row {
+        flex-direction: column;
+        gap: 25px;
+        align-items: center;
+    }
+    .contacts__head--cards, .contacts__head--cards2, .contacts__head--cards3 {
+        width: 100%;
+    }
+    .contacts__head--cards2 {
+        width: 100% !important;
+    }
+}
+@media all and (max-width: 500px){
+    .contacts__form {
+        width: 100%;
+    }
+    .icon__section {
+        padding: 2px;
+    }
+}
+@media all and (max-width: 350px){
+    .form--button {
+        padding: 10px;
+        width: 180px;
+        font-size: 17px;
+    }
 }

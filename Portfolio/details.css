@@ -30,3 +30,6 @@
     font-weight: 100;
     color: var(--gray-text--color);
 }
+#details__image--1{
+    width: 100%;
+}

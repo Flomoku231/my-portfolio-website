@@ -17,7 +17,9 @@
     <main class="home__container">
         <!-- Left Section -->
         <section class="container__left">
+            <div onclick="hideProfile()" class="profile__overlay"></div>
             <div class="left__header">
+                <button onclick="hideProfile()" class="close--profile"><img src="../Assets/Icons/closeMenu.svg" alt="close"></button>
                 <img id="left__header--image" src="../Assets/Emmanuel.jpeg" alt="Emmanuel">
                 <div class="left__header--text">
                     <h1 id="Name">Emmanuel K. Flomoku</h1>
@@ -116,11 +118,17 @@
             </div>
         </section>
         <!-- Middle Section -->
+        <div class="Navbar__container">
+            <div class="Navbar__display">
+            <button onclick="displayProfile()" class="Navbar__right--button"> <img id="Navbar__right--icon" src="../Assets/Icons/dotIcon.svg" alt=""> </button>
+            <button class="Navbar__left--button" onclick="showMe()"><img id="menu__button--image" src="../Assets/Icons/MenuRight.png" alt="Menu"></button> 
+            </div>
+        </div>
         <section class="container__middle">
             <section class="middle__portfolio">
                 <h1>Portfolio</h1>
                 <div class="portfolio__row1">
-                    <a href="./details.html">
+                    <a id="Links" href="./details.html">
                     <div class="portfolio__card">
                         <img id="portfolio__card--image" src="../Assets/Portfolio.png" alt="Portfolio Image">
                         <div class="portfolio__card--content">

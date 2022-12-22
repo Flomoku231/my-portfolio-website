@@ -17,7 +17,9 @@
     <main class="home__container">
         <!-- Left Section -->
         <section class="container__left">
+            <div onclick="hideProfile()" class="profile__overlay"></div>
             <div class="left__header">
+                <button onclick="hideProfile()" class="close--profile"><img src="../Assets/Icons/closeMenu.svg" alt="close"></button>
                 <img id="left__header--image" src="../Assets/Emmanuel.jpeg" alt="Emmanuel">
                 <div class="left__header--text">
                     <h1 id="Name">Emmanuel K. Flomoku</h1>
@@ -117,6 +119,13 @@
         </section>
         <!-- Middle Section -->
         <section class="container__middle">
+              <!-- Middle Section Navbar -->
+            <div class="Navbar__container">
+                <div class="Navbar__display">
+                <button onclick="displayProfile()" class="Navbar__right--button"> <img id="Navbar__right--icon" src="../Assets/Icons/dotIcon.svg" alt=""> </button>
+                <button class="Navbar__left--button" onclick="showMe()"><img id="menu__button--image" src="../Assets/Icons/MenuRight.png" alt="Menu"></button> 
+                </div>
+            </div>
             <!-- Middle Section Head -->
             <section class="middle__header">
                 <div class="middle__header--content">
@@ -124,7 +133,7 @@
                         <h1 id="home__text--head">I am a Full Stack Developer With over 3 years Experienced</h1>
                             <h3 id="Code--text">&lt;<span id="Code">Code</span>&gt; I <span class="auto--text"></span> &lt;/<span id="Code">Code</span>&gt;</h3>
                     </div>
-                    <img src="../Assets/HeaderPhoto.png" alt="Emmanuel">
+                    <img id="header__image" src="../Assets/HeaderPhoto.png" alt="Emmanuel">
             </div>
             </section>
             <!-- About Us Informations -->

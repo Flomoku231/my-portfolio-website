@@ -24,6 +24,7 @@
     width: 100%;
     display: flex;
     flex-direction: row;
+    min-height: 100vh;
     max-height: 150vh;
 }
 
@@ -152,7 +153,6 @@
     width: 262px;
     max-height: 100vh;
     overflow: hidden;
-    animation: profileAnimation 1s ease-in forwards;
     transition: ease-in 1s;
     position: relative;
 }
@@ -181,6 +181,7 @@
 
 .close--profile {
     position: absolute;
+    display: none;
     background-color: var(--gray-background--color);
     cursor: pointer;
     border: none;
@@ -459,6 +460,7 @@ meter::-webkit-meter-bar {
 .container__middle {
     overflow-y: scroll;
     width: 80%;
+    position: relative;
     overflow-x: hidden;
     max-height: 100vh;
     background-color: #191923;
@@ -834,6 +836,7 @@ meter::-webkit-meter-bar {
 /* Middle footer */
 .middle__footer {
     width: 100%;
+    position: absolute;
     background-color: var(--gray-background--color);
     display: flex;
     align-items: center;
@@ -916,10 +919,14 @@ meter::-webkit-meter-bar {
     .container__left {
         display: none;
     }
+    .close--profile {
+      display: block;
+    }
 
     .container__left__display {
         display: block;
         max-height: 100vh;
+        animation: profileAnimation 1s ease-in forwards;
         overflow: hidden;
         position: absolute;
         z-index: 300;
@@ -948,6 +955,7 @@ meter::-webkit-meter-bar {
 
     .Navbar__container {
         display: block;
+        z-index: 200;
     }
 
     .middle__header {
@@ -984,7 +992,7 @@ meter::-webkit-meter-bar {
     }
 
     .services__content--row1,
-    .services__content--row2 {
+    .services__content--row2{
         align-items: center;
         gap: 25px;
         flex-direction: column;
