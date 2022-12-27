@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="../index.css">
     <link rel="stylesheet" href="./contact.css">
     <script defer src="../index.js" ></script>
+    <script defer src="./contact.js"></script>
 </head>
 <body>
     <main class="home__container">
@@ -153,7 +154,7 @@
                 <div class="contacts__form--section">
                     <h2>Get In Touch</h2>
                     <div class="contacts__form--container">
-                        <form action="" class="contacts__form" >
+                        <form class="contacts__form" method="post" >
                             <!-- Name Input -->
                             <div class="name__input--container">
                                 <div class="name__input">
@@ -179,7 +180,7 @@
                                 </div>
                                 <p class="message__error"></p>
                             </div>
-                            <button type="submit" class="form--button" >Send Message</button>
+                            <button type="submit" class="form--button" onsubmit="return validateInputs()">Send Message</button>
                         </form>
                     </div>
                 </div>
@@ -209,7 +210,7 @@
                <a href="../index.html"><li>Home</li></a>
                <a href="../About/about.html"><li>About Me</li></a>
                <a href="../Portfolio/portfolio.html"><li>My Portfolio</li></a>
-               <a href="../contact.html"><li>Contact Me</li></a>
+               <a href="../contact.html"><li id="con">Contact Me</li></a>
             </ul>
         </div>
         </section>

@@ -34,11 +34,20 @@
     width: 100%;
 }
 .portfolio__card,#Links{
+    transform: translateX(100px);
+    transition-delay: 0.3s;
+    opacity: 0;
+    transition-duration: 0.3s;
+    transition-timing-function: forwards ease-in-out;
     display: flex;
     max-width: 250px;
     color: var(--white--color);
     flex-direction: column;
     position: relative;
+}
+.section__card1--observer{
+    opacity: 1;
+    transform: translateX(0);
 }
 .portfolio__card:hover{
     transform: scale(1.1);

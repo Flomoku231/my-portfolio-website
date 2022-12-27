@@ -61,7 +61,7 @@
     position: absolute;
     top: 0;
     bottom: 0;
-    animation: modalAnimation 1s ease-in-out forwards;
+    animation: modalAnimation 0.5s ease-in-out forwards;
     right: 0;
     background-color: var(--gray-background--color);
     display: flex;
@@ -112,7 +112,9 @@
     justify-content: center;
     list-style-type: none;
 }
-
+#Home,#about,#Portf,#con{
+    color: var(--yellow--color);
+}
 .menu--list>a {
     font-size: 18px;
     color: var(--gray-text--color);
@@ -389,7 +391,8 @@ meter::-webkit-meter-bar {
 .skill--nodeJs> ::-webkit-meter-optimum-value,
 .skill--scss> ::-webkit-meter-optimum-value,
 .skill--figma> ::-webkit-meter-optimum-value {
-    background-color: var(--yellow--color);
+    background-color: var(--yellow--color) !important;
+    background: var(--yellow--color) !important;
 }
 
 /* Skill List Section */
@@ -645,6 +648,11 @@ meter::-webkit-meter-bar {
 
 .row1__card,
 .row2__card {
+    transform: translateX(-100px);
+    transition-delay: 0.3s;
+    opacity: 0;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-out;
     max-width: 250px;
     width: 30%;
     background-color: var(--gray-background--color);
@@ -655,7 +663,10 @@ meter::-webkit-meter-bar {
     gap: 10px;
     padding: 1.5rem;
 }
-
+.servicesCards--observer{
+    opacity: 1;
+    transform: translateX(0);
+}
 .row1__card>h2,
 .row2__card>h2 {
     color: var(--white--color);
@@ -694,6 +705,11 @@ meter::-webkit-meter-bar {
 }
 
 .prices__content--card {
+    transform: translateX(200px);
+    transition-delay: 0.3s;
+    opacity: 0;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-out;
     max-width: 250px;
     width: 30%;
     padding: 20px 2rem;
@@ -703,6 +719,10 @@ meter::-webkit-meter-bar {
     flex-direction: column;
     gap: 15px;
     align-items: center;
+}
+.price--observer{
+    opacity: 1;
+    transform: translateX(0);
 }
 
 .prices__content--card>h1 {
@@ -884,7 +904,7 @@ meter::-webkit-meter-bar {
 }
 
 #menu--right {
-    color: var(--gray-text--color);
+    color: var(--yellow--color);
     font-size: 20px;
     display: flex;
     justify-content: center;
