@@ -392,7 +392,6 @@ meter::-webkit-meter-bar {
 .skill--scss> ::-webkit-meter-optimum-value,
 .skill--figma> ::-webkit-meter-optimum-value {
     background-color: var(--yellow--color) !important;
-    background: var(--yellow--color) !important;
 }
 
 /* Skill List Section */
@@ -506,6 +505,7 @@ meter::-webkit-meter-bar {
     width: 90%;
     display: flex;
     flex-direction: row;
+    position: relative;
     justify-content: center;
     margin: auto;
     margin-top: 1.5rem;
@@ -520,18 +520,23 @@ meter::-webkit-meter-bar {
 .middle__header--content {
     display: flex;
     justify-content: space-between;
-    width: 85%;
+    width: 100%;
+    padding: 20px 1rem;
     overflow-y: hidden;
     align-items: center;
 }
 
 #header__image {
-    width: 30% !important;
-
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 400px !important;
+    transform: translateY(-36px);
 }
 
 .middle__header--text {
     display: flex;
+    width: 70%;
     flex-direction: column;
     gap: 20px;
 }
@@ -991,6 +996,7 @@ meter::-webkit-meter-bar {
     .middle__header--text {
         justify-content: center;
         align-items: center;
+        width: 95%;
         text-align: center;
     }
 

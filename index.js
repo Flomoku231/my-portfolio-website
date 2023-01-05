@@ -59,35 +59,59 @@ function hideProfile(){
    profilePopup.classList.remove('container__left__display');
 }
 
-//  SWIPER LOGIC
-
-//  Form Input
 const Form = document.querySelector('.contacts__form');
-// const submitButton = document.querySelector('.form--button');
 const Name = document.getElementById('input__name');
 const Email = document.getElementById('input__email');
 const message = document.getElementById('input__message');
+
+function sendEmail(e){
+   let tempParams = {
+      user_name: Name.value,
+      user_email: Email.value,
+      message: message.value,
+   };
+
+   emailjs.send('contact_service', 'contact_template',tempParams)
+            .then(function() {
+               console.log('SUCCESS!');
+            }, function(error) {
+               console.log('FAILED...', error);
+            });
+}
+//  SWIPER LOGIC
+
+//  Form Input
+// const submitButton = document.querySelector('.form--button');
 const errMessage = document.querySelector('.error__message');
 const emailError = document.querySelector('.error__email');
 const messageError = document.querySelector('.message__error');
 
 
 Form.addEventListener('submit', function(e){
+   e.preventDefault()
 
    if(Name.value == '' ){
-      e.preventDefault()
       errMessage.innerHTML = "name is required."
    }
    if(Email.value == ''){
-      e.preventDefault()
      emailError.innerHTML = "email is required."
+   }else if(!/^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/i.test(Email.value)){
+      emailError.innerHTML = "enter a valid email"
    }
    if(message.value == ''){
-      e.preventDefault()
       messageError.innerHTML = "message is required."
    }
    else{
-      return true
+      sendEmail();
+
+      alert("Message Sent")
+
+      Name.value = ''
+      Email.value = ''
+      message.value = ''
+      errMessage.innerHTML = ""
+      emailError.innerHTML = ""
+      messageError.innerHTML = ""
    }
   
 })

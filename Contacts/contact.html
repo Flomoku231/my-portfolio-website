@@ -13,6 +13,13 @@
     <link rel="stylesheet" href="./contact.css">
     <script defer src="../index.js" ></script>
     <script defer src="./contact.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            emailjs.init('Txy2hMdLyoMN-iiWW');
+        })();
+    </script>
+   
 </head>
 <body>
     <main class="home__container">
@@ -151,15 +158,18 @@
                         </div>
                     </div>
                 </div>
+
+                <!-- Contact Form -->
                 <div class="contacts__form--section">
                     <h2>Get In Touch</h2>
                     <div class="contacts__form--container">
-                        <form class="contacts__form" method="post" >
+                        <form  action="" class="contacts__form" >
                             <!-- Name Input -->
+                            
                             <div class="name__input--container">
                                 <div class="name__input">
                                     <label for="input__name" class="icon__section"> <img  src="../Assets/Icons/User.png" alt="Icon"> </label>
-                                    <input id="input__name"  type="text" placeholder="Name">
+                                    <input id="input__name" name="user_name"  type="text" placeholder="Name">
                                 </div>
                                 <p class="error__message"></p>
                             </div>
@@ -167,7 +177,7 @@
                             <div class="email__input--container">
                                 <div class="email__input">
                                     <label for="input__email" class="icon__section"> <img src="../Assets/Icons/emailIcon.png" alt="Icon"> </label>
-                                    <input id="input__email"  type="email" placeholder="Email">
+                                    <input id="input__email" name="user_email" type="email" placeholder="Email">
                                 </div>
                                 <p class="error__email"></p>
                             </div>
@@ -180,7 +190,7 @@
                                 </div>
                                 <p class="message__error"></p>
                             </div>
-                            <button type="submit" class="form--button" onsubmit="return validateInputs()">Send Message</button>
+                            <button value="Send" type="submit" class="form--button" >Send Message</button>
                         </form>
                     </div>
                 </div>
@@ -214,10 +224,13 @@
             </ul>
         </div>
         </section>
+        <!-- Success Message -->
+        
     </main>
-    </main>
+
 </body>
 </html>
-<!-- Animated text Logic -->
+<!-- Email Js Logic -->
+
 
 
